@@ -1,0 +1,34 @@
+<!--pages/index/dailyrm/dailyrm.wxml-->
+<view class="dailyrm">
+  <swiper catchtap="onSwiperTap" vertical="{{false}}" indicator-dots="{{false}}" autoplay="{{false}}" circular="true">
+    <swiper-item>
+      <image id="7" src="../../../images/index/dailyrm/noodle.png" data-postId="3"></image>
+      <text class=''>1</text>
+    </swiper-item>
+    <swiper-item>
+      <image src="../../../images/index/dailyrm/noodle.png" data-postId="4"></image>
+      <text>2</text>
+    </swiper-item>
+    <swiper-item>
+      <image src="../../../images/index/dailyrm/noodle.png" data-postId="5"></image>
+      <text>3</text>
+    </swiper-item>
+  </swiper>
+</view>
+
+<view class="page-section page-section-spacing swiper">
+  <swiper catchtap="onSwiperTap" vertical="{{false}}" indicator-dots="{{false}}" autoplay="{{false}}" circular="true">
+    <block wx:for="{{background}}" wx:key="*this">
+      <swiper-item>
+        <view class="swiper-item {{item}}"></view>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+  <block wx:for="{{recommend_key}}" wx:key="property">
+    <view class="recommend-list">
+      <image class="recommend-list-image" src="{{item.list_img}}"></image>
+      <text class="recommend-list-text">{{item.list_word}}</text>
+    </view>
+  </block>

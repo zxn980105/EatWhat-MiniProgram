@@ -1,0 +1,22 @@
+<!-- 个人中心 -->
+<view class="myself-content">
+
+  <view class="myself-information">
+    <!-- 展示用户头像和昵称 -->
+    <view class="myself-protrait">
+      <open-data type="userAvatarUrl"></open-data>
+    </view>
+    <view class="myself-name">
+      <open-data type="userNickName"></open-data>
+    </view>
+  </view>
+
+  <!-- 循环写列表，组件复用思想 -->
+  <block wx:for="{{myself_key}}" wx:key="property">
+    <view class="myself-list">
+      <image class="myself-list-image" src="{{item.list_img}}"></image>
+      <text class="myself-list-text">{{item.list_word}}</text>
+    </view>
+  </block>
+
+</view>

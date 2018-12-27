@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/demo/demo",
+    "pages/login/login",
+    "pages/index/dailyrm/dailyrm",
+    "pages/index/index",
+    "pages/myself/myself",
+    "pages/myself/setting/setting",
+    "pages/myself/recommend/recommend",
+    "pages/myself/history/history",
+    "pages/myself/favourite/favourite",
+    "pages/index/eatdiff/eatdiff",
+    "pages/index/wantdiss/wantdiss",
+    "pages/index/wantrm/wantrm"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "便于推荐离你更近的美食"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#eeb87c",
+    "navigationBarTitleText": "吃嘛",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#bfbfbf",
+    "selectedColor": "#d81e06",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首 页",
+        "iconPath": "/images/index/located.png",
+        "selectedIconPath": "/images/index/located.png"
+      },
+      {
+        "pagePath": "pages/myself/myself",
+        "text": "我 的",
+        "iconPath": "images/index/located.png",
+        "selectedIconPath": "images/index/located.png"
+      }
+    ]
+  }
+}

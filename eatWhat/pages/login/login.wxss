@@ -1,0 +1,54 @@
+/* pages/login/login.wxss */
+
+/* 设置整个页面的背景颜色 */
+Page {
+  background-color: #f8e0bc;
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #330000;
+}
+
+.loading {
+  width: 500rpx;
+  height: 500rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loading_image {
+  width: 500rpx;
+  height: 500rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.login_botton {
+  width: 130px;
+  border-radius: 3px;
+  margin: 20px auto;
+  padding-top: 2px;
+  font-size: 14px;
+  background-color: #e46244;
+  color: white;
+  overflow: hidden;
+  height: 40px;
+}
+
+.login_botton::after {
+  border: 1px solid #e46244;
+}

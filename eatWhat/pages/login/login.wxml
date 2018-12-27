@@ -1,0 +1,20 @@
+<!--pages/login/login.wxml-->
+<view class="container">
+  <!-- Logo -->
+  <view class="loading">
+    <image class="loading_image" src="{{loading_img}}">
+    </image>
+  </view>
+  <!-- 登录获取授权 -->
+  <view class="userinfo">
+    <button class="login_botton" wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 登录 </button>
+    <block wx:else>
+      <!-- <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image> -->
+      <image bindtap="onTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text wx:if="{{userInfo.nickName}}" class="userinfo-nickname ">{{"您好，"+userInfo.nickName+"，请点头像进入"}}</text>
+      <block wx:else>
+        <text>不登录是没办法使用的哦~</text>
+      </block>
+    </block>
+  </view>
+</view>

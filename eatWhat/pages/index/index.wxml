@@ -1,0 +1,56 @@
+<!--index.wxml-->
+<view class="index_container">
+
+  <!-- 个人头像 -->
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" class="userinfo-avatar" open-type="getUserInfo" bindgetuserinfo="getUserInfo" mode="cover">尚未登录</button>
+    <block wx:else>
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+    </block>
+  </view>
+
+  <view class="index_head">
+    <text class="index_title">{{title_word}}</text>
+
+    <!-- 城市定位 -->
+    <view class="located">
+      <image class="locatedImg" src="{{location_img}}"></image>
+      <input class='locationWord' placeholder-class='plhStyle' type='number' maxlength='50' placeholder='' bindinput="bindKeyInput" value='{{city}}' disabled></input>
+    </view>
+
+    <!-- 搜索框 -->
+    <!-- <view class="page-section">
+      <view class="weui-cells__title">实时获取输入值：{{inputValue}}</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <input class="weui-input" maxlength="10" bindinput="bindKeyInput" placeholder="输入同步到view中" />
+        </view>
+      </view>
+    </view> -->
+
+    <view class="search">
+      <icon type="search" class="search-img" size="13" color="#405f80"></icon>
+      <input type="text" placeholder="血战钢锯岭、你的名字" placeholder-class="placeholder" bindfocus="onBindFocus" bindconfirm="onBindConfirm" />
+      <image wx:if="{{searchPanelShow}}" src="/images/icon/xx.png" class="xx-img" catchtap="onCancelImgTap"></image>
+    </view>
+
+    <!-- 四个按钮 -->
+    <view class="index_botton">
+      <button catchtap="onPostTap1" class="botton">
+        <text>{{botton1}}</text>
+      </button>
+      <button catchtap="onPostTap2" class="botton">
+        <text>{{botton2}}</text>
+      </button>
+    </view>
+    <view class="index_botton">
+      <button catchtap="onPostTap3" class="botton line2">
+        <text>{{botton3}}</text>
+      </button>
+      <button catchtap="onPostTap4" class="botton line2">
+        <text>{{botton4}}</text>
+      </button>
+    </view>
+
+  </view>
+</view>
